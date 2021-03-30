@@ -31,8 +31,8 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: my-ecr-repo
         IMAGE_TAG: ${{ github.sha }}
-        PATH: $PATH:/home/runner/.local/bin
       run: |
+        export PATH=$PATH:/home/runner/.local/bin
         python3 -m pip install virtualenv
         virtualenv -p python3 venv
         source ./venv/bin/activate
