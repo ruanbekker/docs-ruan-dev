@@ -1,0 +1,26 @@
+site_name: docs.ruan.dev
+theme:
+  name: material
+  features:
+    - navigation.tracking
+    - navigation.expand
+
+repo_url: https://github.com/ruanbekker/docs-ruan-dev/
+site_url: https://docs.ruan.dev
+edit_uri: edit/main/docs/
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - toc:
+      permalink: ¶
+
+nav:
+  - Home: index.md
+  - Setup:
+      - Quick start: quick-start.md
+  - Examples:
+      - Docker Flask and Redis: examples/flask-redis.md
+
+copyright: Copyright &copy; 2017 - 2021 <a href="https://twitter.com/ruanbekker">Ruan Bekker</a> | <a href="https://github.com/ruanbekker/mkdocs-material-starter/blob/main/LICENSE">Documentation Distributed under MIT License</a>
