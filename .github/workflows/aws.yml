@@ -2,8 +2,9 @@
 # and then will deploy a new task definition to Amazon ECS, when a release is created
 #
 on:
-  release:
-    types: [created]
+  push:
+    branches: 
+      - main
 
 name: Deploy Website to S3
 
