@@ -64,9 +64,9 @@ Then run the fluentd daemon:
 docker-compose -f docker-compose.fluentd.yml up -d
 ```
 
-Now our application container can make use of the fluentd logging driver:
+Now our application container can make use of the fluentd logging driver in `docker-compose.yml`:
 
-```yaml docker-compose.yml
+```yaml
 version: "3.7"
 
 services:
