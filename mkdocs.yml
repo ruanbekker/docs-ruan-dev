@@ -20,6 +20,8 @@ nav:
   - Home: index.md
   - Setup:
       - Quick start: quick-start.md
+  - Cheatcheets:
+      - Elasticsearch: cheatsheets/elasticsearch.md
   - Docker:
       - Docker Flask and Redis: docker/flask-redis.md
 
