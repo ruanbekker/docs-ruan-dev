@@ -1,11 +1,10 @@
-# This workflow will build and push a new container image to Amazon ECR,
-# and then will deploy a new task definition to Amazon ECS, when a release is created
-#
-on:
-  release:
-    types: [created]
-
 name: Deploy Website to S3
+
+
+on:
+  push:
+    branches: 
+      - main
 
 jobs:
   deploy:
@@ -27,11 +26,14 @@ jobs:
     - name: Install mkdocs
       id: install-mkdocs
       env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: my-ecr-repo
         IMAGE_TAG: ${{ github.sha }}
+        S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
       run: |
+        export PATH=$PATH:/home/runner/.local/bin
+        python3 -m pip install virtualenv
         virtualenv -p python3 venv
         source ./venv/bin/activate
         pip install -r requirements.txt
+        mkdocs build
+        aws s3 sync ./site s3://$S3_BUCKET_NAME --acl public-read
 
