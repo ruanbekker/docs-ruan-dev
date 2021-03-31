@@ -83,15 +83,36 @@ CMD ["python3", "app.py"]
 And our `docker-compose.yml`:
 
 ```yaml
-web:
-  build: .
-  dockerfile: Dockerfile
-  links:
-    - redis
-  ports:
-    - "80:80"
-redis:
-  image: redis
+version: "3.7"
+
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    links:
+      - redis
+    ports:
+      - "80:80"
+    networks:
+      - app
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+
+  redis:
+    image: redis
+    networks:
+      - app
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+
+networks:
+  app:
+    name: app
 ```
 
 ### Build, Deploy, Test
