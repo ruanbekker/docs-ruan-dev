@@ -20,7 +20,9 @@ nav:
   - Home: index.md
   - Setup:
       - Quick start: quick-start.md
-  - Cheatcheets:
+  - Cheatsheets:
+      - AWS-CLI:
+          - EC2: cheatsheets/awscli/ec2.md
       - Elasticsearch: cheatsheets/elasticsearch.md
   - Docker:
       - Docker Flask and Redis: docker/flask-redis.md
