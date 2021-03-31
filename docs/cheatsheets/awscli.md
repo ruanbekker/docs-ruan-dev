@@ -1,6 +1,8 @@
-# EC2 AWS CLI Cheatsheet
+# AWS CLI Cheatsheet
 
-## Run Instances
+## EC2
+
+### Run Instances
 
 Create the EBS Mapping:
 
@@ -35,7 +37,7 @@ aws --profile default ec2 run-instances --image-id ${AWS_AMI_ID} --count 1 \
      --user-data file://userdata.txt
 ```
 
-## Query
+### Query
 
 Show InstanceId, State, PrivateDnsName of a given PrivateDnsName:
 
@@ -48,12 +50,14 @@ aws --profile dev ec2 describe-instances --query 'Reservations[*].Instances[?Pri
 ]
 ```
 
-## Security Groups
+### Security Groups
 
 Describe Security Group:
 
 ```sh
 aws --profile dev ec2 describe-security-groups --group-ids "sg-00000000000000000"
+```
+```json
 {
     "SecurityGroups": [
         {
@@ -99,7 +103,7 @@ Allow Ingress Rule:
 aws --profile dev ec2 authorize-security-group-ingress --group-id sg-00000000000000000 --protocol tcp --port 3306 --cidr 10.1.10.0/16
 ```
 
-## Subnets
+### Subnets
 
 List the subnets containing "private" in tags:
 
