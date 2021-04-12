@@ -30,5 +30,6 @@ nav:
       - Go Multistage Builds: docker/multistage-go-app.md
       - Traefik: docker/traefik.md
       - MySQL with PhpMyAdmin: docker/mysql-phpmyadmin.md
+      - Loki: docker/loki.md
 
 copyright: Copyright &copy; 2017 - 2021 <a href="https://twitter.com/ruanbekker">Ruan Bekker</a> | <a href="https://github.com/ruanbekker/mkdocs-material-starter/blob/main/LICENSE">Documentation Distributed under MIT License</a>
