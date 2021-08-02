@@ -7,7 +7,7 @@ This stack will boot a mysql container and a phpmyadmin container
 The `docker-compose.yml`:
 
 ```yaml
-version: '3.6'
+version: '3.8'
 
 services:
   phpmyadmin:
@@ -22,7 +22,8 @@ services:
     ports:
       - 18080:80
     depends_on:
-      - mysql-db
+      mysql-db:
+        condition: service_healthy
 
   mysql-db:
     image: mysql:8.0
@@ -39,6 +40,11 @@ services:
     volumes:
       - ./data:/var/lib/mysql
       - ./init.sql:/data/application/init.sql
+    healthcheck:
+      test: ["CMD", "mysql" ,"-h", "mysql-db", "-P", "3306", "-u", "root", "-prootpassword", "-e", "SELECT VERSION()"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
     networks:
       - public
 
