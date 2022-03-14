@@ -20,6 +20,8 @@ nav:
   - Home: index.md
   - Setup:
       - Quick start: quick-start.md
+  - Ansible:
+      - Installation: ansible/installation.md
   - Cheatsheets:
       - AWS-CLI: cheatsheets/awscli.md
       - Elasticsearch: cheatsheets/elasticsearch.md
