@@ -32,7 +32,7 @@ nav:
       - Go Multistage Builds: docker/multistage-go-app.md
       - Traefik: docker/traefik.md
       - MySQL with PhpMyAdmin: docker/mysql-phpmyadmin.md
-      - PHP Nginx and MySQL: docker/php-nginx-mysql.php
+      - PHP Nginx and MySQL: docker/php-nginx-mysql.md
       - Loki: docker/loki.md
   - Kubernetes:
       - k3s: kubernetes/k3s.md
