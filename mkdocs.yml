@@ -35,6 +35,7 @@ nav:
       - PHP Nginx and MySQL: docker/php-nginx-mysql.md
       - Loki: docker/loki.md
       - OpenLDAP: docker/openldap-with-ui.md
+      - MongoDB: docker/mongodb-with-mongoexpress.md
   - Kubernetes:
       - k3s: kubernetes/k3s.md
 

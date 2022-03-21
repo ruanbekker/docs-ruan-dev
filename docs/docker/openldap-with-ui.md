@@ -1,6 +1,6 @@
 # OpenLDAP with UI on Docker
 
-This stack will boot a openldap and openldap-ui container container
+This stack will boot a openldap and openldap-ui container
 
 ## Compose 
 
