@@ -11,10 +11,10 @@ version: "3.8"
 
 services:
   mongodb:
-    image: mongo:4.2
+    image: mongo:4.4
     container_name: mongodb
     restart: unless-stopped
-    command: mongod --oplogSize 128 --replSet rs0
+    command: mongod --wiredTigerCacheSizeGB 1 --oplogSize 128 --replSet rs0
     volumes:
       - ./data/mongo/data/db:/data/db
       - ./data/mongo/data/backups:/dump
@@ -26,7 +26,7 @@ services:
         max-size: "1m"
 
   mongo-init-replica:
-    image: mongo:4.2
+    image: mongo:4.4
     container_name: mono-init-replica
     command: >
       bash -c
@@ -51,6 +51,7 @@ services:
   mongo-express:
     image: mongo-express
     container_name: mongo-express
+    restart: unless-stopped
     environment:
       - ME_CONFIG_MONGODB_URL=mongodb://mongodb:27017/
       - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
@@ -59,7 +60,7 @@ services:
     ports:
       - 18080:8081
     networks:
-      - public
+      - mongodb
     depends_on:
       - mongodb
     logging:
@@ -80,7 +81,28 @@ Boot the stack with docker-compose:
 docker-compose up -d
 ```
 
-You can access Mongo Express on port `18080` and the admin password will be `admin`. 
+## Access MongoDB
+
+For the UI, you can access Mongo Express on port `18080` and the admin password will be `admin`. 
+
+For the CLI, you can access mongodb using docker:
+
+```
+docker-compose exec mongodb mongo
+```
+
+You will be dropped into the mongo shell:
+
+```
+MongoDB shell version v4.4.12
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("0358a67a-1cf5-40ae-b1b8-c2d5b7bfec0d") }
+MongoDB server version: 4.4.12
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+---
+rs0:PRIMARY>
+```
 
 For cheatsheets you can follow:
 - https://github.com/ruanbekker/cheatsheets/tree/master/mongodb
