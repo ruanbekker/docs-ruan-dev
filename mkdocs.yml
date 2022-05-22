@@ -1,6 +1,7 @@
 site_name: docs.ruan.dev
 theme:
   name: material
+  custom_dir: overrides
   features:
     - navigation.tracking
     - navigation.expand
