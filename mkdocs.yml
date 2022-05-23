@@ -27,17 +27,18 @@ nav:
       - AWS-CLI: cheatsheets/awscli.md
       - Elasticsearch: cheatsheets/elasticsearch.md
   - Docker:
-      - Logging with Docker: docker/logging.md
       - Flask and Redis: docker/flask-redis.md
-      - Minio: docker/minio.md
       - Go Multistage Builds: docker/multistage-go-app.md
-      - Traefik: docker/traefik.md
-      - MySQL with PhpMyAdmin: docker/mysql-phpmyadmin.md
-      - PHP Nginx and MySQL: docker/php-nginx-mysql.md
+      - Logging with Docker: docker/logging.md
       - Loki: docker/loki.md
-      - OpenLDAP: docker/openldap-with-ui.md
+      - Minio: docker/minio.md
       - MongoDB: docker/mongodb-with-mongoexpress.md
+      - MySQL with PhpMyAdmin: docker/mysql-phpmyadmin.md
+      - OpenLDAP: docker/openldap-with-ui.md
+      - PHP Nginx and MySQL: docker/php-nginx-mysql.md
+      - Traefik: docker/traefik.md
+      - Umami Analytics: docker/umami-analytics.md
   - Kubernetes:
       - k3s: kubernetes/k3s.md
 
-copyright: Copyright &copy; 2017 - 2021 <a href="https://twitter.com/ruanbekker">Ruan Bekker</a> | <a href="https://github.com/ruanbekker/mkdocs-material-starter/blob/main/LICENSE">Documentation Distributed under MIT License</a>
+copyright: Copyright &copy; 2017 - 2022 <a href="https://twitter.com/ruanbekker">Ruan Bekker</a> | <a href="https://github.com/ruanbekker/mkdocs-material-starter/blob/main/LICENSE">Documentation Distributed under MIT License</a>
