@@ -184,7 +184,7 @@ Click the `</>` button to get the code that you need to place under the `<head>`
 
 The caveat of this example that you can see, is that whenever someone access our website, a request will be executed to `http://umami.127.0.0.1.nip.io/umami.js` which is not routable over the internet.
 
-But you can resolve that by enabling ssl on traefik and setting up dns to your setup, more info in [this blogpost](https://containers.fan/posts/setup-traefik-v2-docker-compose/).
+But you can resolve that by using a public routable ip address, enabling ssl on traefik and setting up dns to your setup, more info in [this blogpost](https://containers.fan/posts/setup-traefik-v2-docker-compose/).
 
 From a public instance the analytics for a configured website will look more or less like this:
 
