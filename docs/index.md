@@ -1,18 +1,15 @@
-# Welcome to the MKDocs Documentation
+# Welcome to docs.ruan.dev
 
-This is a mkdocs example with the material theme.
+This is a space where I keep easy to access docker-compose setups, cheatsheets, etc.
 
-## Why is mkdocs popular
+## About me
 
-* Easy configuration
-* Easy to extend
-* Looks nice
+My name is Ruan Bekker and I am a extremely curious DevOps Engineer, with a enormous passion for teaching others what I know.
 
-## Prerequisites
+To read more about me and check out my projects, visit me on my website:
 
-* Python 
+* https://ruan.dev
 
-## Getting started
+## About this site
 
-To start using mkdocs please use the [Quick start](quick-start.md).
-
+This website is built with [Material for MKDocs](https://squidfunk.github.io/mkdocs-material/) and to see the usage of running your own, check out the [Quick Start](quick-start.md)

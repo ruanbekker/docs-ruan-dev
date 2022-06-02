@@ -19,5 +19,5 @@ pip install -r requirements.txt
 
 ## Explore
 
-One of the examples is accessible by heading to the [examples/flask-redis](examples/flask-redis.md) page.
+One of the examples is accessible by heading to the [docker/flask-redis](docker/flask-redis.md) page.
 
