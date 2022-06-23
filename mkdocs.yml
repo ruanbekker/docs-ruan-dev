@@ -37,6 +37,7 @@ nav:
       - OpenLDAP: docker/openldap-with-ui.md
       - PHP Nginx and MySQL: docker/php-nginx-mysql.md
       - Traefik: docker/traefik.md
+      - Traefik (HTTP): docker/traefik-http.md
       - Umami Analytics: docker/umami-analytics.md
   - Kubernetes:
       - k3s: kubernetes/k3s.md
