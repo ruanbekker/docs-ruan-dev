@@ -23,6 +23,9 @@ nav:
       - Quick start: quick-start.md
   - Ansible:
       - Installation: ansible/installation.md
+      - Configuration: ansible/configuration.md
+      - Ad-Hoc: ansible/adhoc.md
+
   - Cheatsheets:
       - AWS-CLI: cheatsheets/awscli.md
       - Elasticsearch: cheatsheets/elasticsearch.md
