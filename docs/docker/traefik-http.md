@@ -29,7 +29,7 @@ services:
     ports:
       - 80:80
       - 8080:8080
-     networks:
+    networks:
       - public
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -46,7 +46,7 @@ services:
       - "traefik.http.routers.whoami.rule=Host(`whoami.127.0.0.1.nip.io`)"
       - "traefik.http.routers.whoami.entrypoints=web"
       - "traefik.http.services.whoami.loadbalancer.server.port=80"
-     networks:
+    networks:
       - public
     logging:
       driver: "json-file"
